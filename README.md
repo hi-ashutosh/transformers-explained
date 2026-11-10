@@ -1,5 +1,7 @@
 # Transformers — a visual field guide
 
+**[Open the interactive website](https://hi-ashutosh.github.io/transformers-explained/)** · [Source repository](https://github.com/hi-ashutosh/transformers-explained)
+
 An interactive introduction to Transformers, using **“the cat sat on the …”** as a running example. It follows tokens through embeddings, positional signals, attention, Q/K/V, multiple heads, a full decoder block, and next-token prediction. The original encoder–decoder architecture is explained separately and cites [Attention Is All You Need](https://arxiv.org/abs/1706.03762).
 
 ![Interactive Transformer explorer](preview.png)
@@ -70,9 +72,9 @@ Equations are authored as LaTeX in `math.json`. Run `node render-math.mjs` after
 
 ## GitHub Pages
 
-The project is static and ready for GitHub Pages. Create an empty GitHub repository named `transformers-explained`, add it as `origin`, and push the local `main` branch. In **Settings → Pages**, choose **Deploy from a branch → main → /(root)**. `.nojekyll` serves the files directly. All assets use relative paths, so a project URL works without a build step.
+The website publishes from **main → /(root)** at [https://hi-ashutosh.github.io/transformers-explained/](https://hi-ashutosh.github.io/transformers-explained/). Future pushes to `main` trigger a Pages deployment. `.nojekyll` serves the static files directly; there is no application build step.
 
-This initial delivery is a local repository. No remote repository or public deployment is created by the local setup.
+After editing locally, commit and push your changes. Check the repository’s Actions tab for deployment status. For a fork, enable **Settings → Pages → Deploy from a branch → main → /(root)**. All assets use relative paths, so project URLs work.
 
 ## Reference
 
