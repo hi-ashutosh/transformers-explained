@@ -1,0 +1,126 @@
+{
+  "inline-1": {
+    "tex": "n",
+    "display": false
+  },
+  "inline-2": {
+    "tex": "X",
+    "display": false
+  },
+  "inline-3": {
+    "tex": "n\\times d",
+    "display": false
+  },
+  "inline-4": {
+    "tex": "d=8",
+    "display": false
+  },
+  "display-5": {
+    "tex": "x_i=\\sqrt d\\,E[\\mathrm{token}_i]+\\mathrm{PE}(i)",
+    "display": true
+  },
+  "display-6": {
+    "tex": "\\mathrm{PE}(i,2j)=\\sin\\!\\left(\\frac{i}{10000^{2j/d}}\\right)",
+    "display": true
+  },
+  "display-7": {
+    "tex": "\\mathrm{PE}(i,2j+1)=\\cos\\!\\left(\\frac{i}{10000^{2j/d}}\\right)",
+    "display": true
+  },
+  "display-8": {
+    "tex": "Q=XW^Q,\\qquad K=XW^K,\\qquad V=XW^V",
+    "display": true
+  },
+  "display-9": {
+    "tex": "s_{ij}=\\frac{q_i\\cdot k_j}{\\sqrt{d_k}}+M_{ij}",
+    "display": true
+  },
+  "display-10": {
+    "tex": "M_{ij}=\\begin{cases}0&j\\le i\\\\-\\infty&j>i\\end{cases}",
+    "display": true
+  },
+  "display-11": {
+    "tex": "a_{ij}=\\frac{\\exp(s_{ij})}{\\sum_{\\ell}\\exp(s_{i\\ell})}",
+    "display": true
+  },
+  "display-12": {
+    "tex": "o_i=\\sum_j a_{ij}v_j",
+    "display": true
+  },
+  "inline-13": {
+    "tex": "1/\\sqrt{d_k}",
+    "display": false
+  },
+  "inline-14": {
+    "tex": "d_k=d_v=4",
+    "display": false
+  },
+  "display-15": {
+    "tex": "\\mathrm{Attention}(Q,K,V)=\\mathrm{softmax}\\!\\left(\\frac{QK^{\\mathsf T}}{\\sqrt{d_k}}+M\\right)V",
+    "display": true
+  },
+  "display-16": {
+    "tex": "\\mathrm{head}_r=\\mathrm{Attention}(XW_r^Q,XW_r^K,XW_r^V)",
+    "display": true
+  },
+  "display-17": {
+    "tex": "\\mathrm{MHA}(X)=\\mathrm{Concat}(\\mathrm{head}_1,\\mathrm{head}_2)W^O",
+    "display": true
+  },
+  "inline-18": {
+    "tex": "n\\times4",
+    "display": false
+  },
+  "inline-19": {
+    "tex": "n\\times8",
+    "display": false
+  },
+  "inline-20": {
+    "tex": "W^O\\in\\mathbb{R}^{8\\times8}",
+    "display": false
+  },
+  "display-21": {
+    "tex": "Y=\\mathrm{LN}_1\\!\\left(X+\\mathrm{MHA}(X)\\right)",
+    "display": true
+  },
+  "display-22": {
+    "tex": "\\mathrm{FFN}(Y)=\\mathrm{ReLU}(YW_1+b_1)W_2+b_2",
+    "display": true
+  },
+  "display-23": {
+    "tex": "Z=\\mathrm{LN}_2\\!\\left(Y+\\mathrm{FFN}(Y)\\right)",
+    "display": true
+  },
+  "display-24": {
+    "tex": "\\mathrm{LN}(u)=\\gamma\\odot\\frac{u-\\mu(u)}{\\sqrt{\\sigma^2(u)+\\varepsilon}}+\\beta",
+    "display": true
+  },
+  "inline-25": {
+    "tex": "8\to16\to8",
+    "display": false
+  },
+  "display-26": {
+    "tex": "\\ell_i=z_iW_{\\mathrm{vocab}}+b_{\\mathrm{vocab}}",
+    "display": true
+  },
+  "display-27": {
+    "tex": "p_\\theta(\\mathrm{token}_{i+1}\\mid\\mathrm{token}_{\\le i})=\\mathrm{softmax}(\\ell_i)",
+    "display": true
+  },
+  "display-28": {
+    "tex": "\\mathcal{L}(\\theta)=-\\frac1N\\sum_{i=1}^{N}\\log p_\\theta(y_i\\mid\\text{allowed prefix at }i)",
+    "display": true
+  },
+  "display-29": {
+    "tex": "p_j^{(T)}=\\frac{\\exp(\\ell_j/T)}{\\sum_k\\exp(\\ell_k/T)},\\qquad T>0",
+    "display": true
+  },
+  "inline-30": {
+    "tex": "\\sqrt{d_k}",
+    "display": false
+  },
+  "inline-31": {
+    "tex": "n\\times n",
+    "display": false
+  }
+}
