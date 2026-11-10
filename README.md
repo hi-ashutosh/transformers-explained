@@ -62,6 +62,7 @@ Equations are authored as LaTeX in `math.json`. Run `node render-math.mjs` after
 ## Files
 
 - `index.html`, `styles.css`: lesson, original diagrams, responsive layout, accessible controls.
+- `architecture.svg`: connected encoder–decoder diagram with rectangular sublayers, residual paths, and the encoder-memory cross-attention link.
 - `app.mjs`: synchronized model explorer, prediction controls, and training visualization.
 - `model.mjs`: readable, dependency-free Transformer forward pass.
 - `model.json`: trained and initial weights, dimensions, vocabulary, dataset, and training history.
